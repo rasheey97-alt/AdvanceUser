@@ -18,8 +18,8 @@ public class UserService { //model -> Repository -> Service -> Controller
 
 
     @CacheEvict(value = {"allUser", "singleUser"}, allEntries = true)
-    public void saveUser(AdvancedUser advancedUser){
-        userRepository.
+    public AdvancedUser saveUser(AdvancedUser advancedUser){
+        return userRepository.save(advancedUser);
 
     }
 

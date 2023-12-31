@@ -4,9 +4,9 @@ import com.example.AdvanceUser.Model.AdvancedUser;
 import com.example.AdvanceUser.Model.AdvancedUserResource;
 import com.example.AdvanceUser.Repository.CriteriaUserRepository;
 import com.example.AdvanceUser.Services.UserService;
-import com.example.AdvanceUser.Model.AdvancedUser;
-import com.example.AdvanceUser.Repository.CriteriaUserRepository;
-import com.example.AdvanceUser.Services.UserService;
+//import com.example.AdvanceUser.Model.AdvancedUser;
+//import com.example.AdvanceUser.Repository.CriteriaUserRepository;
+//import com.example.AdvanceUser.Services.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ public class UserController {
 
     @PostMapping("/users")
     public ResponseEntity<AdvancedUser> saveUser(@RequestBody @Valid AdvancedUser advancedUser){
-        return new ResponseEntity<>(userService.saveUser(advancedUser), HttpStatus.CREATED);
+                return new ResponseEntity<>(userService.saveUser(advancedUser), HttpStatus.CREATED);
     }
 
     @GetMapping("/users")
